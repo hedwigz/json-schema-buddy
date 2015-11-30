@@ -20,7 +20,7 @@
                         var pom = document.createElement('a');
                         pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
                         // TODO: find suitable name for downloaded file.
-                        pom.setAttribute('download', 'sex.json');
+                        pom.setAttribute('download', 'content.json');
                         pom.style.display = 'none';
                         document.body.appendChild(pom);
                         pom.click();
