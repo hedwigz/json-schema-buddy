@@ -1,0 +1,32 @@
+﻿<ng-include src="'Views/Header.html'"></ng-include>
+<div class="container ng-scope">
+    <div class="row ng-scope">
+
+        <div class="col-md-5 ng-scope" ng-show="ctrl.showJsonEditor">
+
+            <div class="panel panel-info">
+                <div class="panel-heading">JSON</div>
+                <div class="panel-body">
+                    <ng-include src="'/Views/JsonEditor.html'"></ng-include>
+                </div>
+            </div>
+            <button class="btn btn-success tool-tip" title="F5" ng-click="ctrl.generateSchema()">Generate Schema</button>
+            <button class="btn btn-success tool-tip" title="F6" ng-click="ctrl.validateSchema()">Validate Schema</button>
+            <button class="btn btn-success tool-tip" title="Ctrl-Shift-K" ng-click="ctrl.beautifyJson()">Beautify</button>
+            <button class="btn btn-success tool-tip" ng-click="ctrl.openChildWindow()">Dual Monitors</button>
+        </div>
+
+        <div class="ng-scope" ng-class="{'col-md-12': !ctrl.showJsonEditor, 'col-md-7': ctrl.showJsonEditor}">
+
+            <div class="panel panel-success">
+                <div class="panel-heading">Schema</div>
+                <div class="panel-body">
+                    <ng-include src="'/Views/SchemaEditor.html'"></ng-include>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <ng-include src="'/Views/GenerationOptionsModal.html'"></ng-include>
+</div>

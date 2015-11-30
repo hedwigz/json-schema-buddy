@@ -1,0 +1,134 @@
+﻿<!-- Modal -->
+<div class="modal fade" id="OptionsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Generation Options</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form" ng-submit="schemarize(inputJson, inputUrl)" ng-reset="reset();" id="home">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Metadata</label>
+                        <div class="col-sm-10">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" ng-model="ctrl.user_defined_options.metadataKeywords">Include metadata keywords
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">General</label>
+                        <div class="col-sm-10">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" ng-model="ctrl.user_defined_options.includeDefaults">Include default values
+                                    <span id="helpBlock" class="help-block">
+                                        Values are taken from JSON.
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" ng-model="ctrl.user_defined_options.includeEnums">Restrict values to enum
+                                    <span id="helpBlock" class="help-block">
+                                        Uses the default value and null.
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" ng-model="ctrl.user_defined_options.absoluteIds">Use absolute IDs
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" ng-model="ctrl.user_defined_options.forceRequired">Force required
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Objects</label>
+                        <div class="col-sm-10">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" ng-model="ctrl.user_defined_options.additionalProperties">Allow additional properties
+                                    <span id="helpBlock" class="help-block">
+                                        Controls whether it’s valid to have additional properties in the object beyond what is defined in the schema.
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Arrays</label>
+                        <div class="col-sm-10">
+
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" ng-model="ctrl.user_defined_options.additionalItems">Allow additional items
+                                    <span id="helpBlock" class="help-block">
+                                        Controls whether it’s valid to have additional items in the array beyond what is defined in the schema.
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" ng-model="ctrl.user_defined_options.arrayOptions" name="arrayOptions" id="emptySchema" value="emptySchema" checked>Single empty schema
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" ng-model="ctrl.user_defined_options.arrayOptions" name="arrayOptions" id="singleSchema" value="singleSchema">Single schema (list validation)
+                                    <span id="helpBlock" class="help-block">All items match the same schema.</span>
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" ng-model="ctrl.user_defined_options.arrayOptions" name="arrayOptions" id="arraySchema" value="schemaArray">Schema array (tuple typing)
+                                    <span id="helpBlock" class="help-block">Each item matches a different schema and index is meaningful.</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Verboseness</label>
+                        <div class="col-sm-10">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" ng-model="ctrl.user_defined_options.numericVerbose">Make numeric instances verbose
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" ng-model="ctrl.user_defined_options.stringsVerbose">Make strings verbose
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" ng-model="ctrl.user_defined_options.objectsVerbose">Make objects verbose
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" ng-model="ctrl.user_defined_options.arraysVerbose">Make arrays verbose
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
