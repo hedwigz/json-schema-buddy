@@ -1,0 +1,18 @@
+﻿<script>
+    $(document).ready(function () {
+        window.postMessage('ready', window.location.href);
+    });
+</script>
+<style>
+    body {
+        padding-bottom: 0 !important;
+    }
+</style>
+<div dropzone="json-editor" action="api/FilesUpload/"
+     id="UploadsDropZoneJson" style="height: 100%;">
+    <div id="json-editor" class="ace-editor" editor f5="vm.generateSchema()" f6="vm.validateSchema()" style="height: 100%;">
+        {
+        "name": "Amit",
+        "age": 20}
+    </div>
+</div>
