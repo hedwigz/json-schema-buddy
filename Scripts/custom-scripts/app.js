@@ -38,11 +38,11 @@ app.value('default_options', default_options);
 
 app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/Json', {
-        templateUrl: 'json-schema-buddy/Views/JsonOnly.html',
+        templateUrl: './Views/JsonOnly.html',
         controller: 'singleEditorCtrl',
         controllerAs: 'vm'
     }).otherwise({
-        templateUrl: 'json-schema-buddy/Views/MainPage.html',
+        templateUrl: './Views/MainPage.html',
         controller: 'mainCtrl',
         controllerAs: 'ctrl'
     });
