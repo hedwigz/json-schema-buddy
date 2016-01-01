@@ -1,6 +1,9 @@
 # json-schema-buddy
 a pure client side implementation for generation, validation and editing json schemas.
 
+## Demo
+http://amits1995.github.io/json-schema-buddy/
+
 ## Running
 
 1. Download or clone the repository.
