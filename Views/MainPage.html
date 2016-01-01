@@ -1,4 +1,4 @@
-﻿<ng-include src="'json-schema-buddy/Views/Header.html'"></ng-include>
+﻿<ng-include src="'./Views/Header.html'"></ng-include>
 <div class="container ng-scope">
     <div class="row ng-scope">
 
@@ -7,7 +7,7 @@
             <div class="panel panel-info">
                 <div class="panel-heading">JSON</div>
                 <div class="panel-body">
-                    <ng-include src="'json-schema-buddy/Views/JsonEditor.html'"></ng-include>
+                    <ng-include src="'./Views/JsonEditor.html'"></ng-include>
                 </div>
             </div>
             <button class="btn btn-success tool-tip" title="F5" ng-click="ctrl.generateSchema()">Generate Schema</button>
@@ -21,12 +21,12 @@
             <div class="panel panel-success">
                 <div class="panel-heading">Schema</div>
                 <div class="panel-body">
-                    <ng-include src="'/Views/SchemaEditor.html'"></ng-include>
+                    <ng-include src="'./Views/SchemaEditor.html'"></ng-include>
                 </div>
             </div>
         </div>
 
     </div>
 
-    <ng-include src="'json-schema-buddy/Views/GenerationOptionsModal.html'"></ng-include>
+    <ng-include src="'./Views/GenerationOptionsModal.html'"></ng-include>
 </div>
