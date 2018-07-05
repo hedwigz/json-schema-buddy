@@ -46,7 +46,10 @@ var json_schema_completer = {
                 { name: "default", value: "default", score: 20, meta: json_schema },
                 { name: "$ref", value: "$ref", score: 20, meta: json_schema },
                 { name: "pattern", value: "pattern", score: 20, meta: json_schema },
-                { name: "anyOf", value: "anyOf", score: 20, meta: json_schema }
+                { name: "anyOf", value: "anyOf", score: 20, meta: json_schema },
+                { name: "allOf", value: "allOf", score: 20, meta: json_schema },
+                { name: "oneOf", value: "oneOf", score: 20, meta: json_schema },
+                { name: "not", value: "not", score: 20, meta: json_schema }
             ]);
         }
     }
